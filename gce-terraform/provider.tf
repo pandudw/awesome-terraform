@@ -8,7 +8,7 @@ terraform {
 }
 
 provider "google" {
-    project = "research-376317"
+    project = " your project_id"
     credentials = "${file("research-376317-c04b50eec817.json")}"
     region = "us-central1"
     zone = "us-central-c"
