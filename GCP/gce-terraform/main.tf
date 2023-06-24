@@ -8,10 +8,10 @@ terraform {
 }
 
 provider "google" {
-    project = " your project_id"
+    project = var.project_id
     credentials = "${file("cc-capstone-ta-a7fc5895e246.json")}"
     region = "us-central1"
-    zone = "us-central-c"
+    zone = var.zone
 }
 resource "google_compute_instance" "app-instance" {
     name = var.vm_project
@@ -29,4 +29,11 @@ resource "google_compute_instance" "app-instance" {
 
     }
   }
+  scheduling {
+    automatic_restart   = true
+    on_host_maintenance = "MIGRATE"
+    preemptible         = false
+    provisioning_model  = "STANDARD"
+}
+
 }

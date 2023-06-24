@@ -4,6 +4,19 @@ variable "vm_project" {
     default = "sandbox-project-capstone"
 }
 
+variable "project_id" {
+    type = string
+    description = "project id"
+    default = "cc-capstone-ta"
+  
+}
+
+variable "region" {
+    type = string
+    description = "name of region"
+    default = "us-central1"
+}
+
 variable "machine_type" {
     type = string
     description = "name of machine type"
@@ -19,5 +32,5 @@ variable "zone" {
 variable "image" {
     type = string
     description = "image VM"
-    default = "debian-cloud/debian-9"  
+    default = "projects/debian-cloud/global/images/debian-11-bullseye-v20230615"  
 }
