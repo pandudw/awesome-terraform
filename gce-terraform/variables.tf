@@ -1,7 +1,7 @@
 variable "vm_project" {
     type = string
     description = "name of VM instance"
-    default = "app-instance"
+    default = "sandbox-project-capstone"
 }
 
 variable "machine_type" {
