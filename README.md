@@ -1,1 +1,1 @@
-# awasome-terraform
+# awesome-terraform
